@@ -24,9 +24,7 @@ public class FileIO {
             PrintWriter gravarArq = new PrintWriter(arq);
             for(Utilizador user : utilizadores){
                 gravarArq.printf(user.toString());
-                
             }
-
             arq.close();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
