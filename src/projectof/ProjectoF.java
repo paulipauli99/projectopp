@@ -44,7 +44,7 @@ public class ProjectoF {
         FileIO read = new FileIO();
         read.readUsers(utilizadores);
         
-        System.out.println(listaProjetos);
+        System.out.println(utilizadores);
     }
     
 }
