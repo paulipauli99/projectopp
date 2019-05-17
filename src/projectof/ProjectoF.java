@@ -30,19 +30,20 @@ public class ProjectoF {
         ArrayList<Utilizador> utilizadores;
         
         // TODO code application logic here
-        listaProjetos = new ArrayList<Projeto>();
-        utilizadores = new ArrayList<Utilizador>();
+        listaProjetos = new ArrayList<>();
+        utilizadores = new ArrayList<>();
         
-        Utilizador user1 = new Utilizador("user1", "user1", "user1@mail.com", "pass1"); 
+        Utilizador user1 = new Utilizador("joao", "jeje", "user1@mail.com", "pass1"); 
         utilizadores.add(user1);
-        Utilizador user2 = new Utilizador("user2", "user2", "user2@mail.com", "pass2"); 
+        Utilizador user2 = new Utilizador("paulo", "user2", "user2@mail.com", "pass2"); 
         utilizadores.add(user2);
         
         FileIO io = new FileIO();
         io.saveUsers(utilizadores);
         
+        FileIO read = new FileIO();
+        read.readUsers(utilizadores);
         
-        System.out.println("cenas");
         System.out.println(listaProjetos);
     }
     
