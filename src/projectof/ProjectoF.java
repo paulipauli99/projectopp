@@ -5,17 +5,45 @@
  */
 package projectof;
 
+import backend.FileIO;
+import backend.Projeto;
+import backend.Utilizador;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Paulo Rodrigues
  */
 public class ProjectoF {
 
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        ArrayList<Projeto> listaProjetos;
+        ArrayList<Utilizador> utilizadores;
+        
         // TODO code application logic here
+        listaProjetos = new ArrayList<Projeto>();
+        utilizadores = new ArrayList<Utilizador>();
+        
+        Utilizador user1 = new Utilizador("user1", "user1", "user1@mail.com", "pass1"); 
+        utilizadores.add(user1);
+        Utilizador user2 = new Utilizador("user2", "user2", "user2@mail.com", "pass2"); 
+        utilizadores.add(user2);
+        
+        FileIO io = new FileIO();
+        io.saveUsers(utilizadores);
+        
+        
+        System.out.println("cenas");
+        System.out.println(listaProjetos);
     }
     
 }
