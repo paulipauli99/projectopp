@@ -44,7 +44,7 @@ public class ProjectoF {
         FileIO read = new FileIO();
         read.readUsers(utilizadores);
         
-        System.out.println(utilizadores);
+        System.out.println(nome+","+username+","+email","+pass";" );
     }
     
 }
