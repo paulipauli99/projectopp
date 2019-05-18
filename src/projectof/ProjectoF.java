@@ -44,17 +44,17 @@ public class ProjectoF {
         utilizadores.add(user2);
         
         //testes de projetos
-       Projeto proj1 = new Projeto("visaox");
+       /*Projeto proj1 = new Projeto("visaox");
        projetos.add(proj1);
        Projeto proj2 = new Projeto("visaoy");
-       projetos.add(proj2);
+       projetos.add(proj2);*/
         
         FileIO io = new FileIO();
         io.saveUsers(utilizadores);
-        
+        System.out.println(utilizadores.toString());
         FileIO read = new FileIO();
-        read.readUsers(utilizadores);
-        
+        utilizadores=read.readUsers();
+        System.out.println(utilizadores.toString());
         FileIO io1 = new FileIO();
         io1.saveProj(projetos);
         
