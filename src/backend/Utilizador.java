@@ -57,13 +57,7 @@ public class Utilizador {
 
    @Override
     public String toString(){
-    String s="";
-    s+="\n";
-    s+="\nNOME: " + nome;
-    s+="\nUSERNAME: " + username;
-    s+="\nEMAIL: " + email;
-    s+="\nPASS: " + pass;
-    return s.toString();
+    return nome+","+username+","+email+","+pass;
     }
     
     

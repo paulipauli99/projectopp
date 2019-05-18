@@ -5,7 +5,8 @@
  */
 package backend;
 
-import Backend.ListaUtilizadores;
+
+import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
@@ -14,19 +15,29 @@ import java.util.Calendar;
  */
 public class Projeto {
 
-    public Projeto(String titulo, Calendar datainicio, Calendar datafim) {
+    private String titulo;
+    private Calendar dataInicio;
+    private Calendar dataFim;
+    private ArrayList<Tarefa> listaTarefas;
+    private ArrayList<Utilizador> pessoal;
+    private Utilizador owner;
+    
+    public Projeto(String titulo, Calendar datainicio, Calendar datafim,ArrayList<Tarefa> listaTarefas,Utilizador owner) {
         this.titulo = titulo;
-        this.datainicio = datainicio;
-        this.datafim = datafim;
+        this.dataInicio = datainicio;
+        this.dataFim = datafim;
+        this.listaTarefas = listaTarefas;
+        this.owner = owner;
+    }
+
+  public ArrayList<Tarefa> getListaTarefas() {
+        return listaTarefas;
+    }
+
+    public void setListaTarefas(ArrayList<Tarefa> listaTarefas) {
+        this.listaTarefas = listaTarefas;
     }
     
-    private String titulo;
-    private Calendar datainicio;
-    private Calendar datafim;
-    
-    private ListaUtilizadores pessoal;
-    private ListadeTarefas afazeres;
-
     public String getTitulo() {
         return titulo;
     }
@@ -36,34 +47,45 @@ public class Projeto {
     }
 
     public Calendar getDatainicio() {
-        return datainicio;
+        return dataInicio;
     }
 
     public void setDatainicio(Calendar datainicio) {
-        this.datainicio = datainicio;
+        this.dataInicio = datainicio;
     }
 
     public Calendar getDatafim() {
-        return datafim;
+        return dataFim;
     }
 
     public void setDatafim(Calendar datafim) {
-        this.datafim = datafim;
+        this.dataFim = datafim;
     }
 
-    public ListaUtilizadores getPessoal() {
+    public ArrayList<Utilizador> getPessoal() {
         return pessoal;
     }
 
-    public void setPessoal(ListaUtilizadores pessoal) {
+    public void setPessoal(ArrayList<Utilizador> pessoal) {
         this.pessoal = pessoal;
     }
 
-    public ListadeTarefas getAfazeres() {
-        return afazeres;
+    public Utilizador getOwner() {
+        return owner;
     }
 
-    public void setAfazeres(ListadeTarefas afazeres) {
-        this.afazeres = afazeres;
+    public void setOwner(Utilizador owner) {
+        this.owner = owner;
     }
+
+      @Override
+    public String toString(){
+    String s="";
+    s+="\n";
+    s+="\n " + titulo;
+    s+="\n " + dataInicio;
+    s+="\n " + dataFim;
+    s+="\n " + owner;
+    return s;
+}
 }
