@@ -5,7 +5,7 @@
  */
 package backend;
 
-import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -15,13 +15,13 @@ public class Tarefa {
     
     private String titulo;
     private int prioridade; /* o estado é categorizado em 3 digitos (1-pendente,2-em curso,3-fechado) */
-    private Calendar dataFim;
-    private Calendar dataInicio;
+    private Date dataFim;
+    private Date dataInicio;
     private int estado; /* o estado é categorizado em 3 digitos (1-pendente,2-em curso,3-fechado) */
     private String utilAssociado; // isto é o username
     private String utilCriador;
 
-    public Tarefa(String titulo, int prioridade, Calendar dataFim, Calendar dataInicio, int estado, String utilAssociado, String utilCriador){
+    public Tarefa(String titulo, int prioridade, Date dataFim, Date dataInicio, int estado, String utilAssociado, String utilCriador){
 
         this.titulo= titulo;
         this.dataFim = dataFim;
@@ -49,19 +49,19 @@ public class Tarefa {
         this.prioridade = prioridade;
     }
 
-    public Calendar getDataFim() {
+    public Date getDataFim() {
         return dataFim;
     }
 
-    public void setDataFim(Calendar dataFim) {
+    public void setDataFim(Date dataFim) {
         this.dataFim = dataFim;
     }
 
-    public Calendar getDataInicio() {
+    public Date getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(Calendar dataInicio) {
+    public void setDataInicio(Date dataInicio) {
         this.dataInicio = dataInicio;
     }
 

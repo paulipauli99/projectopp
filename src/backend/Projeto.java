@@ -7,7 +7,7 @@ package backend;
 
 
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -16,13 +16,13 @@ import java.util.Calendar;
 public class Projeto {
 
     private String titulo;
-    private Calendar dataInicio;
-    private Calendar dataFim;
+    private Date dataInicio;
+    private Date dataFim;
     private ArrayList<Tarefa> listaTarefas;
     private ArrayList<Utilizador> pessoal;
     private Utilizador owner;
     
-    public Projeto(String titulo, Calendar datainicio, Calendar datafim,ArrayList<Tarefa> listaTarefas,Utilizador owner) {
+    public Projeto(String titulo, Date datainicio, Date datafim,ArrayList<Tarefa> listaTarefas,Utilizador owner) {
         this.titulo = titulo;
         this.dataInicio = datainicio;
         this.dataFim = datafim;
@@ -46,19 +46,19 @@ public class Projeto {
         this.titulo = titulo;
     }
 
-    public Calendar getDatainicio() {
+    public Date getDatainicio() {
         return dataInicio;
     }
 
-    public void setDatainicio(Calendar datainicio) {
+    public void setDatainicio(Date datainicio) {
         this.dataInicio = datainicio;
     }
 
-    public Calendar getDatafim() {
+    public Date getDatafim() {
         return dataFim;
     }
 
-    public void setDatafim(Calendar datafim) {
+    public void setDatafim(Date datafim) {
         this.dataFim = datafim;
     }
 
